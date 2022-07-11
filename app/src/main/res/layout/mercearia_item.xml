@@ -8,18 +8,28 @@
     android:background="@drawable/container_components">
 
 
+    <ImageView
+        android:id="@+id/fotoproduto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/arroz"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="14dp" />
+
     <TextView
         android:id="@+id/nomeproduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="57dp"
         android:text="Arroz"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fotoproduto"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -28,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Valor: R$ 20,00"
+        android:fontFamily="sans-serif-condensed-light"
         app:layout_constraintEnd_toEndOf="@id/quantidade"
         app:layout_constraintStart_toStartOf="@+id/nomeproduto"
         app:layout_constraintTop_toBottomOf="@+id/nomeproduto"
@@ -38,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="Qnt: 1 pacote"
         app:layout_constraintStart_toStartOf="@+id/valor"
         app:layout_constraintTop_toBottomOf="@+id/valor"
@@ -46,12 +58,13 @@
 
     <TextView
         android:id="@+id/desconto"
-        android:layout_width="140dp"
-        android:layout_height="20dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="10dp"
         android:background="@color/green"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="desconto"
+        android:textSize="12dp"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/quantidade"
         app:layout_constraintTop_toBottomOf="@+id/quantidade"
@@ -66,6 +79,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="52dp"
         android:text="Val: 02/2023"
+        android:fontFamily="sans-serif-condensed-light"
         app:layout_constraintBottom_toBottomOf="@+id/valor"
         app:layout_constraintStart_toEndOf="@+id/desconto"
         app:layout_constraintTop_toTopOf="@+id/valor"
@@ -77,17 +91,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:text="Ref: 001"
+        android:fontFamily="sans-serif-condensed-light"
         app:layout_constraintStart_toStartOf="@+id/validade"
         app:layout_constraintTop_toBottomOf="@+id/validade"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/combo"
-        android:layout_width="140dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="10dp"
         android:text="Leve 2 por R$ 18,00"
+        android:textSize="12dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:background="@color/orange"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/referencia"

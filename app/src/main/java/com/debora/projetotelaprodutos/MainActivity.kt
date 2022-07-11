@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView_produtos.adapter = adapterProduto
 
         val produto1 = Produto(
+            R.drawable.arroz,
             nomeproduto = "Arroz",
             quantidade = "Qnt: 1kg",
             valor = "R$ 10,00",
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         )
         val produto2 = Produto(
+            R.drawable.feijao,
             nomeproduto = "Feijão",
             quantidade = "Qnt: 1kg",
             valor = "R$ 20,00",
@@ -41,13 +43,14 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produto3 = Produto(
+            R.drawable.macarrao,
             nomeproduto = "Macarrão",
             quantidade = "Qnt: 500g",
             valor = "R$ 4,00",
             validade = "Val: 02/08/2022",
             referencia = "Ref. 103",
             desconto =  "10% de desconto",
-            combo = "Leve 3 por R$10"
+            combo = "Leve 3 por R$10,00"
         )
 
 

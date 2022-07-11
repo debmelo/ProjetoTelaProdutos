@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ import com.debora.projetotelaprodutos.model.Produto
 class AdapterProduto (private val context: Context, private val produtos: MutableList<Produto> ): RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
 
     inner class ProdutoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        val fotoproduto = itemView.findViewById<ImageView>(R.id.fotoproduto)
         val nomeproduto = itemView.findViewById<TextView>(R.id.nomeproduto)
         val quantidade = itemView.findViewById<TextView>(R.id.quantidade)
         val valor = itemView.findViewById<TextView>(R.id.valor)
@@ -31,6 +33,7 @@ class AdapterProduto (private val context: Context, private val produtos: Mutabl
     }
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
+        holder.fotoproduto.setImageResource(produtos[position].fotoproduto)
         holder.nomeproduto.text = produtos[position].nomeproduto
         holder.quantidade.text = produtos[position].quantidade
         holder.valor.text = produtos[position].valor
